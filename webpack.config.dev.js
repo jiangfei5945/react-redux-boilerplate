@@ -2,7 +2,7 @@ module.exports = {
   devtool: 'eval-cheap-module-source-map',
 
   entry: {
-    main: './src/main.js',    
+    main: './src/index.js',    
   },
 
   output: {
@@ -13,7 +13,7 @@ module.exports = {
 
   module: {
     loaders: [{
-      test: /\.js*$/, loader: 'babel-loader',
+      test: /(\.js|\.jsx)$/, loader: 'babel-loader',
       include: [/src/]
     }]
   },
