@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import { Router, Route, browserHistory } from 'react-router';
 import todoApp from './reducers';
 import App from './components/App';
 
@@ -10,6 +11,8 @@ const rootEl = document.getElementById('root');
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router history={browserHistory}>
+      <Route path="/index/(:filter)" component={App} />
+    </Router>
   </Provider>,
   rootEl);
