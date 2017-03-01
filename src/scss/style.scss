@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,body,#root,#root > div{
+  height: 100%;
+}
+
+.header{
+  position: fixed;
+  z-index: 999;
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  background: #208ac3;
+
+  .header-title{
+    margin-left: 20px;
+    color: #fff;
+    font-size: 24px;    
+  }
+}
+
+.main{
+  padding-top:50px;
+  height: 100%;
+
+  .sider-bar{
+    width: 200px;
+    height: 100%;
+    float: left;
+    background: #24344b;
+    > ul{
+      margin-top: 20px;
+      display: block;
+      list-style: none;
+      
+      >li{
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .content {
+    height: 100%;
+    width: 100%;
+    padding-left: 200px;
+  }
+}
