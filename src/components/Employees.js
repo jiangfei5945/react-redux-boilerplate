@@ -28,8 +28,8 @@ const mapStateToProps = (state) => {
 };
 
 Employees.propTypes = {
-  dispatch: React.propTypes.function.isRequired,
-  employee: React.propTypes.shape({
+  dispatch: React.PropTypes.func.isRequired,
+  employee: React.PropTypes.shape({
     list: React.PropTypes.array
   }).isRequired
 };

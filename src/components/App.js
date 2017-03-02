@@ -10,8 +10,8 @@ const App = (props) => {
       <div className="main">
         <div className="sider-bar">
           <ul>
-            <li><Link to="/index/employee-list">list</Link></li>
-            <li><Link to="/index/employee-create">create</Link></li>
+            <li><Link to="/employee-list">list</Link></li>
+            <li><Link to="/employee-create">create</Link></li>
           </ul>
         </div>
         <div className="content">
@@ -23,7 +23,7 @@ const App = (props) => {
 };
 
 App.propTypes = {
-  children: React.propTypes.node.isRequired
+  children: React.PropTypes.node.isRequired
 };
 
 export default App;
