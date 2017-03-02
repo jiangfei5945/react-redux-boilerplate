@@ -15,7 +15,7 @@ const devMiddleware = webpackDevMiddleware(compiler, {
 });
 
 function createConsole() {
-    const endpoint = 'http://localhost:8081';
+    const endpoint = 'http://localhost:3000';
     const app = new Express();
     const indexPath = path.resolve(__dirname + '/../index.html');
 
@@ -23,7 +23,7 @@ function createConsole() {
     app.use('/asset', Express.static(path.resolve(__dirname, '../asset')));
     app.use('/p', proxy(endpoint, {
         forwardPath: (req) => {
-            return `/p${url.parse(req.url).path}`;
+            return `/api${url.parse(req.url).path}`;
         },
     }));
 
