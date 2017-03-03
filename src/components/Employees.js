@@ -10,10 +10,10 @@ class Employees extends React.Component {
   }
 
   render() {
-    const { employee } = this.props;
+    const { employees } = this.props;
     return (
       <ul>
-        {employee.list && employee.list.map((item) => {
+        {employees && employees.map((item) => {
           return <li key={item.name}>{item.name}</li>;
         })}
       </ul>
@@ -23,15 +23,15 @@ class Employees extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    employee: state.employee
+    employees: state.employees
   };
 };
 
 Employees.propTypes = {
   dispatch: React.PropTypes.func.isRequired,
-  employee: React.PropTypes.shape({
-    list: React.PropTypes.array
-  }).isRequired
+  employees: React.PropTypes.arrayOf(
+    React.PropTypes.shape({ name: React.PropTypes.string })
+  ).isRequired
 };
 
 export default connect(mapStateToProps)(Employees);

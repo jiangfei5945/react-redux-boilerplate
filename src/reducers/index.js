@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import employee from './employee';
+import employees from './employees';
 
-const todoApp = combineReducers({
-  employee
+const rootReducer = combineReducers({
+  employees
 });
 
-export default todoApp;
+export default rootReducer;
